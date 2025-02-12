@@ -1,0 +1,26 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+   <!-- MySQL Datasource -->
+    <persistence-unit name="JPADB">
+        <jta-data-source>TestDataSource</jta-data-source>
+        <class>com.stateless.jpa.UserEntity</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="Database Driver Name" />
+            <property name="javax.persistence.jdbc.url" value="Database Url" />
+            <property name="javax.persistence.jdbc.user" value="Database Username" />
+            <property name="javax.persistence.jdbc.password" value="Database Password" />
+            <property name="showSql" value="true"/>
+             <property name="hibernate.dialect"
+                value="org.hibernate.dialect.MySQLDialect" />
+        </properties>
+    </persistence-unit>
+</persistence>
+    <persistence-unit name="TestPersistence" transaction-type="RESOURCE_LOCAL">
+        <class><!-- Entity Manager Class Name --></class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="Database Driver Name" />
+            <property name="javax.persistence.jdbc.url" value="Database Url" />
+            <property name="javax.persistence.jdbc.user" value="Database Username" />
+            <property name="javax.persistence.jdbc.password" value="Database Password" />
+        </properties>
+    </persistence-unit>
+</persistence>
